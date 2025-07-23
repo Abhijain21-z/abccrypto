@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 5% 8%;
+    --foreground: 60 9% 98%;
+    --card: 60 5% 12%;
+    --card-foreground: 60 9% 98%;
+    --popover: 60 5% 12%;
+    --popover-foreground: 60 9% 98%;
+    --primary: 210 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 60 5% 23%;
+    --secondary-foreground: 60 9% 98%;
+    --muted: 60 5% 38%;
+    --muted-foreground: 60 5% 85%;
+    --accent: 210 70% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 60 5% 23%;
+    --input: 60 5% 23%;
+    --ring: 210 70% 50%;
+    --success: 140 50% 50%;
+    --warning: 0 70% 60%;
+    
+    /* Crypto brand colors as semantic tokens */
+    --crypto-bitcoin: 35 100% 50%;
+    --crypto-ethereum: 216 100% 50%;
+    --crypto-binance: 45 100% 50%;
+    --crypto-solana: 258 100% 50%;
+    --crypto-cardano: 216 75% 40%;
+    --crypto-polkadot: 333 100% 50%;
+    --crypto-chainlink: 204 100% 50%;
+    --crypto-litecoin: 0 0% 50%;
+    --crypto-stellar: 245 100% 60%;
+    --crypto-polygon: 258 75% 40%;
+    --crypto-avalanche: 0 100% 50%;
+    --crypto-uniswap: 315 100% 60%;
+    --crypto-cosmos: 216 90% 30%;
+    --crypto-algorand: 0 0% 20%;
+    --crypto-near: 140 75% 40%;
+    --crypto-fantom: 216 90% 20%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-secondary bg-opacity-20 backdrop-blur-lg border border-white border-opacity-10 shadow-lg;
+}
+
+.crypto-chart {
+  @apply h-[300px] w-full;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
